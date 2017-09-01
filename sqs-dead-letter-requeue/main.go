@@ -93,8 +93,9 @@ func main() {
 			i := strconv.Itoa(index)
 
 			sendMessageBatchRequestEntries = append(sendMessageBatchRequestEntries, &sqs.SendMessageBatchRequestEntry{
-				Id:          &i,
-				MessageBody: element.Body})
+				Id:                &i,
+				MessageAttributes: element.MessageAttributes,
+				MessageBody:       element.Body})
 		}
 
 		_, err = conn.SendMessageBatch(&sqs.SendMessageBatchInput{

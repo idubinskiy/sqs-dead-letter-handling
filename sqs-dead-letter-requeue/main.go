@@ -5,9 +5,10 @@ import (
 	"os"
 	"strconv"
 
+	kingpin "gopkg.in/alecthomas/kingpin.v2"
+
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"gopkg.in/alecthomas/kingpin.v1"
 )
 
 var (
